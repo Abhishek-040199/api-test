@@ -16,13 +16,17 @@
         How to pass variables and data
         from PHP to JavaScript?
     </h4>
-      
+     
     <?php
-        $name = "Hello World";
+    	include("simple_html_dom.php");
+
+        $html = file_get_html('http://www.google.com/');
+
+        $html->find('title',0)->plaintext;
     ?>
   
     <script type="text/javascript">
-        var x = "<?php echo"$name"?>";
+        var x = "<?php echo"$html"?>";
         document.write(x);
     </script>
 </body>
