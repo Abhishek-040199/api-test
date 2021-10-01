@@ -32,6 +32,7 @@
     <script type="text/javascript">
         var x = "<?php echo"$final"?>";
         document.write(x);
+        console.log(x);
     </script>
 </body>
   
